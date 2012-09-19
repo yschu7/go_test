@@ -1,5 +1,5 @@
 package main
-
+// add to xxx.go
 import (
     "fmt"
     "net"
@@ -8,6 +8,7 @@ import (
     "time"
     "flag"
     "os"
+    "new"
 )
 
 type Server struct {}
