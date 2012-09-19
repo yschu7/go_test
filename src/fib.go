@@ -1,18 +1,13 @@
 package main
-
 import (
   "fmt"
 )
-
-// fibonacci is a function that returns
-// a function that returns an int.
 func fibonacci() func() int {
   a, b := 0, 1
-  fib := func() int {
+  return func() int {   // function is a value and also a closure
     a, b = b, a+b
     return a
   }
-  return fib
 }
 
 func main() {
@@ -21,4 +16,3 @@ func main() {
     fmt.Println(f())
   }
 }
-
