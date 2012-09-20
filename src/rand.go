@@ -1,14 +1,24 @@
 package main
 
-import ("fmt";"flag";"math/rand";"time")
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
 
 func main() {
-    // Define flags
-    maxp := flag.Int("max", 6, "the max value")
-    // Parse
-    flag.Parse()
     // Generate a number between 0 and max
+		max := 10
     rand.Seed(time.Now().Unix())
-    fmt.Println(rand.Intn(*maxp))
+    for i := 0; i < 6; i++ {
+	    fmt.Print(rand.Intn(max), " / ")
+	  }
+	  fmt.Println()
+    // float
+    times := int64(time.Now().Nanosecond())
+    rand.Seed(times)
+    for i := 0; i < 6; i++ {
+	    fmt.Printf("%2.2f / ", 100*rand.Float32())
+	  }
 }
 
