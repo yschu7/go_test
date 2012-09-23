@@ -1,5 +1,4 @@
-// you can edit this code
-// another 
+#!/usr/bin/env gorun
 package main
 
 import (
@@ -7,9 +6,12 @@ import (
 //  "./test.go"
 )
 func main() {
-
-  fm.Printf("%t = ??? \n", isTrue())
+  n := -1
+  fm.Printf("%d > 0 : %t \n", n, isTrue(n))
 }
-func isTrue() bool{
-  return true
+func isTrue(x int) bool{
+  if x > 0 {
+    return true
+  }
+  return false
 }
